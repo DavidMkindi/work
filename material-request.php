@@ -205,6 +205,25 @@ $displayName = isset($_SESSION['user_name']) && $_SESSION['user_name'] !== '' ? 
             white-space: normal;
             word-break: break-word;
         }
+
+        /* Theme-aware black/white action buttons */
+        .btn-invert {
+            background-color: #18181b; /* zinc-900, black in light theme */
+            color: #ffffff;
+            border-color: transparent;
+        }
+        .btn-invert:hover {
+            background-color: #27272a;
+        }
+        [data-theme="dark"] .btn-invert,
+        .dark .btn-invert {
+            background-color: #ffffff; /* white in dark theme */
+            color: #09090b;
+        }
+        [data-theme="dark"] .btn-invert:hover,
+        .dark .btn-invert:hover {
+            background-color: #e4e4e7;
+        }
     </style>
 </head>
 <body>
@@ -379,7 +398,7 @@ $displayName = isset($_SESSION['user_name']) && $_SESSION['user_name'] !== '' ? 
                             <h6 class="card-title">Raw Materials Needed</h6>
                             <p class="card-subtitle mb-0">Add the materials required for this production job, e.g. "Paper A3 150 GM, 5 Reams".</p>
                         </div>
-                        <button type="button" onclick="addItemRow()" class="btn btn-sm bg-primary text-white whitespace-nowrap">
+                        <button type="button" onclick="addItemRow()" class="btn btn-sm btn-invert whitespace-nowrap">
                             <i data-lucide="plus" class="size-3.5 me-1"></i>Add Material
                         </button>
                     </div>
@@ -421,7 +440,7 @@ $displayName = isset($_SESSION['user_name']) && $_SESSION['user_name'] !== '' ? 
                         </table>
 
                         <div class="mt-4 flex items-center gap-3">
-                            <button type="submit" name="action" value="submit" class="btn bg-primary text-white">
+                            <button type="submit" name="action" value="submit" class="btn btn-invert">
                                 <i data-lucide="send" class="size-4 me-1"></i>Submit for Approval
                             </button>
                             <button type="submit" name="action" value="save_draft" class="btn bg-default-150 text-default-700">

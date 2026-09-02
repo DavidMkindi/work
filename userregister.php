@@ -111,6 +111,43 @@ if (isset($connect) && !$connect->connect_error) {
   <script defer src="./assets/js/app.js"></script>
 
   <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+      html, body {
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+      }
+
+      /* Buttons: match theme (black in light, white in dark) */
+      .btn-primary,
+      .btn.bg-primary,
+      .btn.bg-transparent {
+          background-color: #000 !important;
+          border-color: #000 !important;
+          border-radius: 0.5rem !important;
+          color: #fff !important;
+      }
+      .btn-primary:hover,
+      .btn.bg-primary:hover,
+      .btn.bg-transparent:hover {
+          background-color: #262626 !important;
+          border-color: #262626 !important;
+          color: #fff !important;
+      }
+      html[data-theme="dark"] .btn-primary,
+      html[data-theme="dark"] .btn.bg-primary,
+      html[data-theme="dark"] .btn.bg-transparent {
+          background-color: #ffffff !important;
+          border-color: #ffffff !important;
+          color: #000000 !important;
+      }
+      html[data-theme="dark"] .btn-primary:hover,
+      html[data-theme="dark"] .btn.bg-primary:hover,
+      html[data-theme="dark"] .btn.bg-transparent:hover {
+          background-color: #e5e5e5 !important;
+          color: #000000 !important;
+      }
+  </style>
 </head>
 
 <body>

@@ -111,6 +111,16 @@ function sidebarLogoSymbol(string $class): string {
     return $svg;
 }
 ?>
+<style>
+    /* Sidebar: grey hover+active background and normal text color instead of blue */
+    html[data-theme="light"],
+    html[data-sidenav-color="light"] {
+        --sidenav-item-hover-bg: #f4f4f5;
+        --sidenav-item-active-bg: #f4f4f5;
+        --sidenav-item-hover-color: var(--color-zinc-600);
+        --sidenav-item-active-color: var(--color-zinc-600);
+    }
+</style>
 <!-- Start Sidebar -->
 <aside id="app-menu" class="app-menu">
 
