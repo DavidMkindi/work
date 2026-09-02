@@ -139,6 +139,25 @@ function userInitials(string $name): string {
             padding: 0;
             overflow-x: hidden;
         }
+
+        .warehouse-add-button {
+            background-color: #000 !important;
+            border-radius: 0.5rem !important;
+            color: #fff !important;
+        }
+
+        .warehouse-add-button:hover {
+            background-color: #262626 !important;
+        }
+
+        html[data-theme="dark"] .warehouse-add-button {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        html[data-theme="dark"] .warehouse-add-button:hover {
+            background-color: #e5e5e5 !important;
+        }
     </style>
 </head>
 
@@ -291,7 +310,7 @@ function userInitials(string $name): string {
                                 <input type="text" name="address" class="form-input" placeholder="e.g. 123 Industrial St">
                             </div>
                             <div class="flex items-end justify-end">
-                                <button type="submit" class="btn btn-primary w-full">
+                                <button type="submit" class="btn btn-primary w-full warehouse-add-button">
                                     <i data-lucide="plus" class="size-4"></i>
                                     Register Warehouse
                                 </button>

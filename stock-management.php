@@ -208,6 +208,44 @@ function userInitials(string $name): string {
             padding: 0;
             overflow-x: hidden;
         }
+
+        .stock-action-button {
+            background-color: #000 !important;
+            border-radius: 0.5rem !important;
+            color: #fff !important;
+        }
+
+        .stock-action-button:hover {
+            background-color: #262626 !important;
+        }
+
+        .stock-action-button.stock-remove-button {
+            background-color: #dc2626 !important;
+        }
+
+        .stock-action-button.stock-remove-button:hover {
+            background-color: #b91c1c !important;
+        }
+
+        /* Dark theme: invert the non-remove buttons to white bg / black text */
+        html[data-theme="dark"] .stock-action-button {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        html[data-theme="dark"] .stock-action-button:hover {
+            background-color: #e5e5e5 !important;
+        }
+
+        /* Keep the remove button red in dark theme too */
+        html[data-theme="dark"] .stock-action-button.stock-remove-button {
+            background-color: #dc2626 !important;
+            color: #ffffff !important;
+        }
+
+        html[data-theme="dark"] .stock-action-button.stock-remove-button:hover {
+            background-color: #b91c1c !important;
+        }
     </style>
 </head>
 
@@ -380,7 +418,7 @@ function userInitials(string $name): string {
                                 <input type="number" name="quantity" class="form-input" min="1" placeholder="0" required>
                             </div>
                             <div class="flex items-end justify-end">
-                                <button type="submit" class="btn btn-primary w-full">
+                                <button type="submit" class="btn btn-primary w-full stock-action-button">
                                     <i data-lucide="arrow-down-to-line" class="size-4"></i>
                                     Stock In
                                 </button>
@@ -407,7 +445,7 @@ function userInitials(string $name): string {
                                 </select>
                             </div>
                             <div class="flex items-end justify-end">
-                                <button type="submit" class="btn btn-danger w-full">
+                                <button type="submit" class="btn btn-danger w-full stock-action-button stock-remove-button">
                                     <i data-lucide="trash-2" class="size-4"></i>
                                     Remove from Stock
                                 </button>
@@ -438,7 +476,7 @@ function userInitials(string $name): string {
                                 <input type="number" name="quantity" class="form-input" min="0" placeholder="0" required>
                             </div>
                             <div class="flex items-end justify-end">
-                                <button type="submit" class="btn btn-primary w-full">
+                                <button type="submit" class="btn btn-primary w-full stock-action-button">
                                     <i data-lucide="sliders-horizontal" class="size-4"></i>
                                     Adjust
                                 </button>
@@ -471,7 +509,7 @@ function userInitials(string $name): string {
                                 <p class="text-sm text-default-500">Select an item and location, then press <span class="font-semibold text-default-800">Count Stock</span> to check the on-hand quantity.</p>
                             </div>
                             <div>
-                                <button type="button" id="count-button" class="btn btn-primary w-full">
+                                <button type="button" id="count-button" class="btn btn-primary w-full stock-action-button">
                                     <i data-lucide="clipboard-list" class="size-4"></i>
                                     Count Stock
                                 </button>
@@ -509,7 +547,7 @@ function userInitials(string $name): string {
                                 <input type="number" name="quantity" class="form-input" min="1" placeholder="0" required>
                             </div>
                             <div class="flex items-end justify-end">
-                                <button type="submit" class="btn btn-primary w-full">
+                                <button type="submit" class="btn btn-primary w-full stock-action-button">
                                     <i data-lucide="move-right" class="size-4"></i>
                                     Transfer
                                 </button>

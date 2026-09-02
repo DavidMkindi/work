@@ -269,6 +269,25 @@ if ($wizardItemId > 0) {
             background: #fee2e2;
             color: #991b1b;
         }
+
+        .category-form-button {
+            background-color: #000 !important;
+            border-radius: 0.5rem !important;
+            color: #fff !important;
+        }
+
+        .category-form-button:hover {
+            background-color: #262626 !important;
+        }
+
+        html[data-theme="dark"] .category-form-button {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        html[data-theme="dark"] .category-form-button:hover {
+            background-color: #e5e5e5 !important;
+        }
     </style>
 </head>
 <body>
@@ -378,7 +397,7 @@ if ($wizardItemId > 0) {
                             </div>
                         </div>
                         <div class="card-footer flex justify-end gap-2">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary category-form-button">
                                 <i data-lucide="arrow-right" class="size-4 me-1"></i>
                                 Next
                             </button>
@@ -434,7 +453,7 @@ if ($wizardItemId > 0) {
                                 <i data-lucide="arrow-left" class="size-4 me-1"></i>
                                 Back
                             </button>
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary category-form-button">
                                 <i data-lucide="save" class="size-4 me-1"></i>
                                 Save Category
                             </button>

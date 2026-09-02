@@ -190,6 +190,25 @@ function userInitials(string $name): string {
             padding: 0;
             overflow-x: hidden;
         }
+
+        .service-add-button {
+            background-color: #000 !important;
+            border-radius: 0.5rem !important;
+            color: #fff !important;
+        }
+
+        .service-add-button:hover {
+            background-color: #262626 !important;
+        }
+
+        html[data-theme="dark"] .service-add-button {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        html[data-theme="dark"] .service-add-button:hover {
+            background-color: #e5e5e5 !important;
+        }
     </style>
 </head>
 
@@ -334,7 +353,7 @@ function userInitials(string $name): string {
                                 <textarea name="description" class="form-input" rows="2" placeholder="Optional description for this service"></textarea>
                             </div>
                             <div class="flex items-end justify-end lg:col-span-3">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary service-add-button">
                                     <i data-lucide="plus" class="size-4"></i>
                                     Add Service
                                 </button>
