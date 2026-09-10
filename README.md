@@ -1,12 +1,213 @@
 <div align="center">
 
-# 🖨️ PICS — Print Inventory Control System
+<!-- ===== Animated Hero ===== -->
+<div class="pics-hero">
 
-### Inventory, production, & waste management platform for printing operations
+  <!-- orbiting badge -->
+  <div class="pics-orb pics-orb-1">🖨️</div>
+  <div class="pics-orb pics-orb-2">📦</div>
+  <div class="pics-orb pics-orb-3">♻️</div>
 
-**PHP 8 · MySQL (MariaDB) · Vanilla JS · Tailwind-style UI**
+  <div class="pics-badge">
+    <span class="pics-pulse"></span>
+    Print Inventory Control System
+  </div>
+
+  <h1 class="pics-title">
+    <span class="pics-letter" style="--i:1">P</span><span class="pics-letter" style="--i:2">I</span><span class="pics-letter" style="--i:3">C</span><span class="pics-letter" style="--i:4">S</span>
+    <span class="pics-title-spacer"></span>
+    <span class="pics-letter" style="--i:5">🖨️</span>
+  </h1>
+
+  <p class="pics-tagline">Inventory · Production · Waste Management — one seamless platform for printing operations</p>
+
+  <div class="pics-pills">
+    <span class="pics-pill">✨ PHP 8</span>
+    <span class="pics-pill">🗄️ MySQL / MariaDB</span>
+    <span class="pics-pill">⚡ Vanilla JS</span>
+    <span class="pics-pill">🎨 Tailwind-Style UI</span>
+    <span class="pics-pill">🐘 XAMPP Ready</span>
+  </div>
+
+  <div class="pics-divider"></div>
 
 </div>
+
+<!-- ===== Animated Hero CSS (100% GitHub-flavoured Markdown compatible) ===== -->
+<style>
+  /* ---- hero container ---- */
+  .pics-hero {
+    position: relative;
+    padding: 3.2rem 1.5rem 2.4rem;
+    margin: 1.5rem auto 2rem;
+    background: linear-gradient(160deg, rgba(129,140,248,.08), rgba(52,211,153,.05) 45%, rgba(251,191,36,.08));
+    background-size: 300% 300%;
+    animation: picsBgShift 12s ease infinite;
+    border-radius: 28px;
+    border: 1px solid rgba(129,140,248,.18);
+    box-shadow: 0 20px 60px -18px rgba(99,102,241,.35);
+    overflow: hidden;
+  }
+  @keyframes picsBgShift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+  /* ---- animated gradient title (sweeping rainbow) ---- */
+  .pics-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .1em;
+    font-size: clamp(3.2rem, 9vw, 6.2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: .06em;
+    margin: .6rem 0 .8rem;
+    width: 100%;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6, #fbbf24, #34d399, #60a5fa);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: picsGradient 5s linear infinite;
+    filter: drop-shadow(0 4px 22px rgba(167,139,250,.45));
+  }
+  @keyframes picsGradient { 0% { background-position: 0% 50%; } 100% { background-position: 300% 50%; } }
+
+  /* ---- per-letter pop-in (staggered) ---- */
+  .pics-letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(26px) scale(.6) rotate(-8deg);
+    animation: picsPop .7s cubic-bezier(.2,.8,.2,1) forwards;
+    animation-delay: calc(var(--i) * .14s);
+  }
+  @keyframes picsPop {
+    0%   { opacity: 0; transform: translateY(26px) scale(.6) rotate(-8deg); }
+    70%  { opacity: 1; transform: translateY(-4px) scale(1.08) rotate(2deg); }
+    100% { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+  }
+  .pics-title-spacer { width: .28em; display: inline-block; }
+
+  /* ---- top badge with live pulse dot ---- */
+  .pics-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .55em;
+    padding: .45em 1.3em;
+    border-radius: 999px;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #e0e7ff;
+    background: linear-gradient(90deg, rgba(99,102,241,.22), rgba(236,72,153,.18));
+    border: 1px solid rgba(129,140,248,.35);
+    box-shadow: 0 6px 22px -8px rgba(99,102,241,.5);
+  }
+  .pics-pulse {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: #34d399;
+    box-shadow: 0 0 0 0 rgba(52,211,153,.7);
+    animation: picsPulse 1.8s infinite;
+  }
+  @keyframes picsPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(52,211,153,.7); }
+    70%  { box-shadow: 0 0 0 12px rgba(52,211,153,0); }
+    100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
+  }
+
+  /* ---- tagline ---- */
+  .pics-tagline {
+    font-size: clamp(1rem, 2.6vw, 1.35rem);
+    font-weight: 500;
+    color: #c7d2fe;
+    margin: 0 auto 1.4rem;
+    max-width: 46rem;
+    animation: picsFadeUp 1s ease .8s both;
+  }
+
+  /* ---- tech-stack pills ---- */
+  .pics-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin-bottom: 1.4rem;
+    animation: picsFadeUp 1s ease 1.1s both;
+  }
+  .pics-pill {
+    padding: .42em 1.05em;
+    border-radius: 999px;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    background: rgba(30,41,59,.72);
+    border: 1px solid rgba(148,163,184,.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .pics-pill:hover {
+    transform: translateY(-4px) scale(1.05);
+    border-color: rgba(129,140,248,.7);
+    box-shadow: 0 10px 24px -8px rgba(99,102,241,.55);
+  }
+
+  /* ---- shimmer divider ---- */
+  .pics-divider {
+    height: 5px;
+    width: min(340px, 78%);
+    margin: .4rem auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, transparent, #60a5fa, #f472b6, #34d399, transparent);
+    background-size: 220% 100%;
+    animation: picsShimmer 3.2s linear infinite;
+  }
+  @keyframes picsShimmer { 0% { background-position: 0% 0; } 100% { background-position: 220% 0; } }
+
+  /* ---- floating emoji orbs ---- */
+  .pics-orb {
+    position: absolute;
+    font-size: 1.7rem;
+    opacity: .5;
+    filter: drop-shadow(0 0 10px rgba(129,140,248,.6));
+    animation: picsFloat 6s ease-in-out infinite;
+    pointer-events: none;
+    user-select: none;
+  }
+  .pics-orb-1 { top: 14%; left: 6%; animation-delay: 0s; }
+  .pics-orb-2 { top: 58%; right: 5%; animation-delay: -2s; }
+  .pics-orb-3 { top: 12%; right: 10%; animation-delay: -4s; }
+  @keyframes picsFloat {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50%      { transform: translateY(-14px) rotate(8deg); }
+  }
+
+  /* ---- shared fade-up ---- */
+  @keyframes picsFadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---- light-theme polish (GitHub default) ---- */
+  @media (prefers-color-scheme: light) {
+    .pics-pill {
+      background: rgba(241,245,249,.9);
+      color: #334155;
+      border-color: rgba(100,116,139,.25);
+    }
+    .pics-tagline { color: #475569; }
+    .pics-badge { color: #4338ca; background: linear-gradient(90deg, rgba(99,102,241,.12), rgba(236,72,153,.1)); border-color: rgba(99,102,241,.3); }
+  }
+
+  /* ---- reduce-motion accessibility ---- */
+  @media (prefers-reduced-motion: reduce) {
+    .pics-hero { animation: none; }
+    .pics-title { animation: none; }
+    .pics-letter { animation: none; opacity: 1; transform: none; }
+    .pics-pulse, .pics-divider, .pics-orb { animation: none; }
+  }
+</style>
 
 ---
 
